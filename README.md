@@ -7,11 +7,7 @@
 By: *Praneel Bhatia* & *Krishang Agarwal*
 
 
-**Faculty of Technology and Bionics**
-
-***Rhine-Waal University of Applied Sciences***
-
-Date: 23 October 2023
+Date: 6 Jan 2024
 
 ----
 
@@ -25,11 +21,7 @@ The end product would feature a compact Gameboy designed diligently on a suitabl
 
 This report will show all the steps taken to get to the end-product, all the challenges that we faced in the process and their respective solutions as well.
 
-## 2 Table of Contents
-
-[[_TOC_]]
-
-## 3 Introduction
+## 2 Introduction
 
 The evolution of portable gaming has drastically shot up ever since the release of the first Gameboy by Nintendo in 1989, which set a profound standard for on the go gaming. When looking through the eyes of Practical Electronics, the endeavor to create a Gameboy serves as a comprehensive application of electronic principles and PCB fabrication, and aids us in developing the right skills needed for future projects in this field.
 
@@ -44,7 +36,7 @@ The implementation of the above mentioned parts along with their control with th
 The rest of the report will duly focus on the required technicalities and further aspects of the making of our project.
 
 
-## 4	Literature review
+## 3	Literature review
 
 This project was inspired by the work of Yellow Purple<sup>[4]</sup>. 
 Yellow Purple: https://www.youtube.com/@YellowPurple
@@ -54,7 +46,7 @@ ATtiny85 Games: https://github.com/andyhighnumber/Attiny-Arduino-Games
 
 Electrical formulas and methods were properly used thanks to the wonderful teaching and guidance of Professor Hartanto and Mr. Kremer.
 
-## 5    Bill of Materials
+## 4    Bill of Materials
 
 | No. | Qty. | manufacturer                 | component         | ordering code (manufacturer) | vendor   | ordering code (vendor) | Price per unit €\* | Price €\* | Link                                                                                                                                    |
 | --- | ---- | ---------------------------- | ----------------- | ---------------------------- | -------- | ---------------------- | ------------------ | --------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -87,9 +79,9 @@ The project initiated with the brainstorming of necessary features of the Gamebo
 10) 6 DIP slot: to allow easy flashing of new games onto already mounted ATtiny85.
 11) 4 DIP slot: to mount and elevate OLED to avoid physical interference with ATtiny85 mount. Also, to allow exchange of OLED screens as they are an expensive component. Directly soldering them onto the PCB will be a permanent mount and fail to pull them out of the circuit and reuse as easily.
 
-## 6    PCB
+## 5    PCB
 
-### 6.1     Schematic
+### 5.1     Schematic
 With all of the components in mind, we started preparing the schematic of the electrical connections that underlie our device. For this, we initially began our electrical sketch on Fusion 360, but later on moved it to Autodesk EAGLE because it was more comprehensive, common and interactive in the Practical Electronics course. 
 
 Final Schematic:
@@ -105,11 +97,11 @@ Below the buttons are the connections for the power LED, power supply (coin cell
 
 Towards the right of the schematic, we have made the connections for the slide switch and connector pins with the appropriate connections to the ATtiny85 for flashing new games when needed. This makes the flashing of new games much easier for the user and helps the user in enjoying the device to the most.
 
-### 6.2    PCB Design
+### 5.2    PCB Design
 
 After designing the schematic on Eagle, we clicked the "Generate/Switch to Board". This converted all the schematic symbols into part footprints. The next step was to design the PCB outline, the placement of the different parts and their connections, and the silk screen which accommodates all the labels and text on the PCB. Routing is the term used to describe the electrical connections of the parts on a PCB together.
 
-#### 6.2.1 PCB Outline
+#### 5.2.1 PCB Outline
 
 We wanted our PCB outline to be similar to the silhouette of a game controller. This required a custom design which had to be made in Fusion 360 and then be imported to the dimension layer in Eagle. The outline in Fusion 360 was designed as any other normal sketch that would be done in a CAD software. Our base dimensions were 80mm x 70mm. All our dimensions as well as sketch can be seen in the picture below:
 
@@ -119,7 +111,7 @@ We wanted our PCB outline to be similar to the silhouette of a game controller. 
 
 This can be later imported into Eagle in the BRD viewer mode, where there is a panel on the extreme right edge dedicated to Fusion 360.
 
-#### 6.2.2 Part placement
+#### 5.2.2 Part placement
 
 Once we had our desired board outline, we started to place the components on the board. The following is our layout:
 
@@ -138,7 +130,7 @@ All the components were placed on the top side of the board for easy view, and w
 
 The placement of all the components was smartly done to incorporate a compact, space efficient and aesthetic view.
 
-#### 6.2.3 Routing
+#### 5.2.3 Routing
 
 Now for the connections of all these parts, we went through a number of different ways till we got to the most fitting. To sum it all up, we incorporated the use of Top-layer connections, Bottom-layer connections, ground planes and placement of vias. Vias are used to connect the top and the bottom plane connections. We used a track width of 1 milimetre for the routings. For the vias, we used a drill of 0.5 and diameter of 1.5. All values in mm.
 
@@ -167,7 +159,7 @@ Figure 5: Final Routing
 
 Overall, our final model for the routing on the PCB focused on both aesthetic and functionally efficient connections. 
 
-#### 6.2.4 Silk Screen
+#### 5.2.4 Silk Screen
 
 The Silk Screen is the layer on the PCB which has to be considered when giving the PCB in for industrial manufacturing. It consists of all the text and labels on the PCB to help yourself or someone else to assemble your PCB when needed or to simply add your label or any other necessary info on the PCB. 
 
@@ -177,10 +169,10 @@ The Silk Screen is the layer on the PCB which has to be considered when giving t
 
 We placed values of resistors and labels to where each part is to be placed as easily understandable instructions for anyone else who wants to assemble our board from scratch. Additionally, we added our names and group number, as instructed, and our device name and inspiring quote to go along with it - GameIt "From breadboard to leaderboard".
 
-### 6.3	Methodology 
+### 5.3	Methodology 
 In this section, we will talk about the process flow of the development of our end product, showing the beginning to end stages in its making. 
 
-#### 6.3.1 Breadboarding
+#### 5.3.1 Breadboarding
 
 We begun bringing the product to life by modelling it on a breadboard first. We made use of jumper wires, an arduino power supply breakout board which made use of a 9V battery, and the rest of the components needed to form the device (i.e Buzzer, OLED, Buttons, Resistors, LED).
 
@@ -192,7 +184,7 @@ Figure 6: Breadboard Prototype
 
 This model worked perfectly, after which we went on to the PCB design stage.
 
-#### 6.3.2 PCB Prototype
+#### 5.3.2 PCB Prototype
 
 The PCB design process has already been discussed above. Our next step after prototyping was to implement our circuit on a real PCB. With the help of the tutors and Mr. Kremer, we were able to etch our first PCB in the chemical lab. 
 
@@ -339,9 +331,9 @@ Figure 22: Industrial PCB
 
 We then assembled, troubleshooted and finalized with these PCB's and got to our final product.
 
-### 6.4 Assembly Process 
+### 5.4 Assembly Process 
 
-#### 6.4.1 Soldering SMD Components
+#### 5.4.1 Soldering SMD Components
 ![This image shows the placement of SMD components on the PCB: GameIT](img/SMD.jpg "SMD Components") 
 
 Figure 23: SMD components placement
@@ -358,7 +350,7 @@ Before soldering the THT components we need to solder the SMD components marked 
 ![This is an image of the PCB going into the oven to bake](img/PCB_Oven.png)
 
 Figure 24: PCB going into oven
-#### 6.4.2 Soldering THT Components
+#### 5.4.2 Soldering THT Components
 ![This image shows the placement of THT components on the PCB: GameIT](img/THT.jpg "THT Components") 
 
 Figure 25: THT components placement
@@ -375,9 +367,9 @@ Now we can solder rest of the components onto the PCB
 
 if all done correctly, when turned on the LED should light up.Now power it off and proceed to next step
 
-## 7   Programming and uploading games
+## 6   Programming and uploading games
 
-### 7.1 Programming the Arduino Uno as an ISP and Burning BootLoader to Attiny85 (Modify)
+### 6.1 Programming the Arduino Uno as an ISP and Burning BootLoader to Attiny85 (Modify)
 
 An Arduino Uno Board is used to make a very simple ISP (In System Programmer) using, some male-to-male cables and 10uF capacitor.
 
@@ -408,7 +400,7 @@ Now follow these steps below:
     - Now set the programmer as Arduino as isp (done above) *Tools>Programmer>Arduino as isp*
     - Now burn the bootloader onto the Attiny *Tools>Burn Bootloader* The programmer should flash for a few seconds, and you should see a message that theBootloader Burn was successful. At this point, you should be able to upload games onto the chip.
 
-### 7.2  Uploading the games on the ATtiny85
+### 6.2  Uploading the games on the ATtiny85
 
 1) Now download the codes from [Andy Jackson's](https://github.com/andyhighnumber/Attiny-Arduino-Games) github repository. We would recommend our favourite the [Space attack game](https://github.com/andyhighnumber/Attiny-Arduino-Games/tree/master/SpaceAttackAttiny) 
 2) Downlaod and extract the folder then open it in the Arduino IDE and upload the *.ino* code. After successful flashing restart the Gameboy and the game should start working. 
@@ -422,7 +414,7 @@ It was done by editting the follwoing lines *202* and *203* of the Space attack 
     ssd1306_char_f6x8(0, 6, "PRANEEL BHATIA");  
     ssd1306_char_f6x8(0, 7, "KRISHANG AGARWAL");  
 ```
-## 8 Troubleshooting and fixes
+## 7 Troubleshooting and fixes
 
 Although this should work as it is however we faced some issues in getting it to work, here are our problems and the solutions we found for them:
 
@@ -482,14 +474,13 @@ Figure 27: Lack of ground plane for pad pointed by arrow
 
 Figure 28: Problem number pointing to its respective solution.
 
-## 9	Result: Working GameBoy
+## 8	Result: Working GameBoy
 
 ![This shows the working prototype](img/WorkingVideo.mp4)
 
 
 
-
-##     Power Consumption and Battery Life
+## 9    Power Consumption and Battery Life
 
 We calculated the power consumption and the consequent battery life of our device with the knowledge of the type of battery that we used and other values that we could get with the use of a multimeter. We used a bench power supply for this as well. 
 
