@@ -484,7 +484,7 @@ Figure 28: Problem number pointing to its respective solution.
 
 We calculated the power consumption and the consequent battery life of our device with the knowledge of the type of battery that we used and other values that we could get with the use of a multimeter. We used a bench power supply for this as well. 
 
-![This is an image of the bench power supply](img/Measure.jpg)
+![This is an image of the bench power supply img/gameIT.jpg](img/Measure.jpg)
 
 Figure 29: Bench power supply
 
